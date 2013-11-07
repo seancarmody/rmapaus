@@ -1,4 +1,4 @@
-export(getAusMap)
+export(getMapAus)
 export(mapBox)
 export(mapCrop)
 export(mapIntersect)

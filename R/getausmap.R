@@ -7,7 +7,8 @@
 #' 
 #' @export
 
-getAusMap <- function(type="SD", crop=TRUE){
-  load("data/aus-sd.Rdata")
-  if (crop) mapCrop(aus.SD, bb.australia) else aus.SD
+getMapAus <- function(type="SD", crop=TRUE){
+  data(aussd, envir = environment(), package="rmapaus")
+  map <- get(paste("aus", type, sep="."), envir=environment(), inherits=FALSE)
+  if (crop) mapCrop(map, bb.australia) else map
 }
