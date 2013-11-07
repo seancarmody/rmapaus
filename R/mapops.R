@@ -59,5 +59,5 @@ mapIntersect <- function(x, y, crop = FALSE){
 
 mapCrop <- function(sp, coords, crop=TRUE){
   bb <- mapBox(coords, sp) 
-  mapIntersection(sp, bb, crop=crop)
+  mapIntersect(sp, bb, crop=crop)
 }
