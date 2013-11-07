@@ -1,4 +1,27 @@
-# Generic map plotting functions
+#' Draw map and fill regions
+#'
+#' Use ggplot2 to draw a map and fill regions of the map based on
+#' values in a dataframe.
+#' 
+#' @param x data frame with fill values
+#' @param map a map of type \code{SpatialPolygonsDataFrame}
+#' @param fill name of field in \code{x} containing fill values
+#' @param id name of field in \code{x} containing map region id values. Defaults 
+#'   to the first field name \code{x} and \code{map} have in common
+#' @param id.name name of field in \code{mapdata} containing region names
+#'   used for (optional) region labelling
+#' @param border colour of region borders
+#' @param ticks a logical value indicating whether tick marks should be added
+#'   to axes. Defaults to \code{FALSE}.
+#' @param labels a logical value indicating whether regions should be labelled.
+#'    Defaults to \code{FALSE}
+#' @param label.filter string to be evaluated in the context of `x` which determines
+#'    whether a given region will be labelled.
+#' @param ... additional parameters passed to \code{geom_text}
+#'    
+#' @details Draws a map.
+#' 
+#' @export
 
 mapfill <- function(x, map, fill, id = intersect(names(x), names(map)), 
                     id.name = id, border="grey95", ticks=FALSE, 

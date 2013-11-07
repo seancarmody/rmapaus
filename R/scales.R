@@ -1,3 +1,8 @@
+#' Add guide colours
+#' 
+#' @param ... additional arguments passed to scale functions
+#' 
+#' @export
 
 scale_fill_heat <- function(...){
   scale_fill_gradient2(na.value = "grey65", 
