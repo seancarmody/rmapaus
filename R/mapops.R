@@ -1,9 +1,9 @@
 #' Create a box spatial object
 #' 
 #' @param coords coordinates
-#' @sp optional spatial reference object from which to inherit projection
-#' @id id of the (single) rectangular polygon. Defaults to \code{"1"}
-#' @CRS projection (coordinate reference system) string
+#' @param sp optional spatial reference object from which to inherit projection
+#' @param id id of the (single) rectangular polygon. Defaults to \code{"1"}
+#' @param CRS projection (coordinate reference system) string
 #' 
 #' @export
 

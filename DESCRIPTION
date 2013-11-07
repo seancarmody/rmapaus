@@ -19,3 +19,5 @@ Collate:
     'mapfill.R'
     'mapspot.R'
     'scales.R'
+    'mapops.R'
+    'getausmap.R'

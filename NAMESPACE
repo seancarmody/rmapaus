@@ -1,2 +1,5 @@
+export(mapBox)
+export(mapCrop)
+export(mapIntersect)
 export(mapfill)
 export(scale_fill_heat)
