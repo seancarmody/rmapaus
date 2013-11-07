@@ -29,7 +29,7 @@ mapspot <- function(x, map, fill, size, id = intersect(names(x), names(map)),
                     lab.size = 3, regions = "white", max_size = 6,
                     size.label = comma, ...) {
   # Check map data includes coordinates for points and labels
-  stopifnot(all(c("long", "lat") %in% names(sd.map)))
+  stopifnot(all(c("long", "lat") %in% names(map)))
   x <- as.data.frame(x)
   if (length(id) > 1) {
     id <- id[1]

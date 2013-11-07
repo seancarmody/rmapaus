@@ -45,7 +45,7 @@ mapfill <- function(x, map, fill, id = intersect(names(x), names(map)),
     expand_limits(x = map_df$long, y = map_df$lat)
  if(labels) {
    # Check map data includes coordinates for labels
-   if (!all(c("long", "lat") %in% names(sd.map))){
+   if (!all(c("long", "lat") %in% names(map))){
      warning("Label coordinates 'long' and 'lat' not provided.")
    } else {
     # Apply filter to labels
