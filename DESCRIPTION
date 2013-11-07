@@ -7,9 +7,8 @@ Author: Sean Carmody
 Maintainer: Sean Carmody <seancarmody@gmail.comt>
 Description: Tools for plotting Australian maps
 Depends:
-    R (>= 2.15)
+    R (>= 2.15), ggplot2
 Imports:
-    ggplot2,
     scales,
     rgeos,
     maptools
