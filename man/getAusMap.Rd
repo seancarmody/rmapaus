@@ -4,6 +4,9 @@
 \usage{
   getAusMap(type = "SD")
 }
+\arguments{
+  \item{map}{type}
+}
 \description{
   Load Australian maps
 }

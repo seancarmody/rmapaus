@@ -1,3 +1,4 @@
+export(getAusMap)
 export(mapBox)
 export(mapCrop)
 export(mapIntersect)
