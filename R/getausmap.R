@@ -9,6 +9,9 @@
 
 getMapAus <- function(type="SD", crop=TRUE){
   data(aussd, envir = environment(), package="rmapaus")
-  map <- get(paste("aus", type, sep="."), envir=environment(), inherits=FALSE)
-  if (crop) mapCrop(map, bb.australia) else map
+  map <- get(paste0("aus.", type), envir=environment(), inherits=FALSE)
+  if (crop) {
+    map <- mapCrop(map, bb.australia)
+  }
+  map
 }

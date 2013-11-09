@@ -35,6 +35,7 @@ mapfill <- function(x, map, fill, id = intersect(names(x), names(map)),
   
   # Restrict to common regions
   ids <- intersect(map@data[, id], x[, id])
+  if (length(ids) < 2) stop("At least two distinct regions required for mapping.")
   map <- map[map@data[,id] %in% ids, ]
   x <- x[x[, id] %in% ids, ]
   map_df <- fortify(map, region=id)
