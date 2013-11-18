@@ -50,7 +50,7 @@ mapfill <- function(x, map, fill, id = intersect(names(x), names(map)),
      warning("Label coordinates 'long' and 'lat' not provided.")
    } else {
     # Apply filter to labels
-    ids <- intersect(map@data[, id], with(x, x[eval(parse(text=label.filter)), id]))
+    ids <- x[eval(substitute(label.filter), x, parent.frame()), id]
     map <- map[map@data[ ,id] %in% ids,]
     plt <- plt + geom_text(data=map@data,
                              aes_string(x="long", y="lat", label=id.name, fill=NULL),  
