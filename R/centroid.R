@@ -5,9 +5,7 @@
 # projection, such as +proj=laea (Lambert Azimuthal Equal Area)
 
 calc.labpt <- function(pols, colnames=c("long", "lat")) {
-  require(rgeos)
-  require(rgdal)
-  
+
   # Force planar coordinates
   suppressWarnings(proj4string(pols) <- CRS("+proj=laea"))
   
