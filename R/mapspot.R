@@ -6,6 +6,8 @@
 #' @param x data frame with fill values and bubble sizes
 #' @param map a map of type \code{SpatialPolygonsDataFrame}
 #' @param fill name of field in \code{x} containing fill values
+#' @param size name of field in \code{x} containing the size values (mapped 
+#' to size aesthetic).
 #' @param id name of field in \code{x} containing map region id values. Defaults 
 #'   to the first field name \code{x} and \code{map} have in common
 #' @param id.name name of field in \code{mapdata} containing region names
@@ -20,6 +22,7 @@
 #' @param lab.size size of region label text
 #' @param regions colour of map regions
 #' @param max_size maximum size of bubbles
+#' @param size.label label formatter defaults to \code{comma}
 #' @param ... additional parameters passed to \code{geom_text}
 #'    
 #' @details Draws a map.

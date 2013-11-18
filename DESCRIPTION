@@ -1,23 +1,18 @@
 Package: rmapaus
 Type: Package
 Title: What the package does (short line)
-Version: 0.1.0
-Date: 2013-11-05
+Version: 0.1.1
+Date: 2013-11-18
 Author: Sean Carmody
 Maintainer: Sean Carmody <seancarmody@gmail.comt>
 Description: Tools for plotting Australian maps
 Depends:
     R (>= 2.15),
-    ggplot2, rgeos, rgdal
+    ggplot2,
+    rgeos,
+    rgdal
 Imports:
     scales,
     maptools
 License: GPL (>=2)
 URL: https://github.com/seancarmody/rmapaus
-Collate:
-    'mapfill.R'
-    'mapspot.R'
-    'scales.R'
-    'mapops.R'
-    'getausmap.R'
-    'centroid.R'

@@ -1,6 +1,6 @@
 #' Load Australian maps
 #' 
-#' @param map type
+#' @param type a map type
 #' @param crop a logical value determining whether map should be cropped
 #'   to mainland Australia and Tasmania (i.e. excluding Cocos Keeling Islands,
 #'   Christmas Island and Lord Howe Island).

@@ -2,7 +2,7 @@
 \alias{mapIntersect}
 \title{Intersection of two maps}
 \usage{
-  mapIntersect(x, y, crop = FALSE)
+mapIntersect(x, y, crop = FALSE)
 }
 \arguments{
   \item{x}{first map}

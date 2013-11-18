@@ -2,10 +2,10 @@
 \alias{getMapAus}
 \title{Load Australian maps}
 \usage{
-  getMapAus(type = "SD", crop = TRUE)
+getMapAus(type = "SD", crop = TRUE)
 }
 \arguments{
-  \item{map}{type}
+  \item{type}{a map type}
 
   \item{crop}{a logical value determining whether map
   should be cropped to mainland Australia and Tasmania

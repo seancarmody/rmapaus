@@ -2,11 +2,10 @@
 \alias{mapspot}
 \title{Draw map and add bubbles}
 \usage{
-  mapspot(x, map, fill, size,
-    id = intersect(names(x), names(map)), id.name = id,
-    border = "grey95", ticks = FALSE, labels = FALSE,
-    label.filter = TRUE, lab.size = 3, regions = "white",
-    max_size = 6, size.label = comma, ...)
+mapspot(x, map, fill, size, id = intersect(names(x), names(map)),
+  id.name = id, border = "grey95", ticks = FALSE, labels = FALSE,
+  label.filter = TRUE, lab.size = 3, regions = "white", max_size = 6,
+  size.label = comma, ...)
 }
 \arguments{
   \item{x}{data frame with fill values and bubble sizes}
@@ -15,6 +14,9 @@
 
   \item{fill}{name of field in \code{x} containing fill
   values}
+
+  \item{size}{name of field in \code{x} containing the size
+  values (mapped to size aesthetic).}
 
   \item{id}{name of field in \code{x} containing map region
   id values. Defaults to the first field name \code{x} and
@@ -40,6 +42,9 @@
   \item{regions}{colour of map regions}
 
   \item{max_size}{maximum size of bubbles}
+
+  \item{size.label}{label formatter defaults to
+  \code{comma}}
 
   \item{...}{additional parameters passed to
   \code{geom_text}}

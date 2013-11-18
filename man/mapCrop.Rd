@@ -2,7 +2,7 @@
 \alias{mapCrop}
 \title{Crop a spatial object to  within a specified rectangular region}
 \usage{
-  mapCrop(sp, coords, crop = TRUE)
+mapCrop(sp, coords, crop = TRUE)
 }
 \arguments{
   \item{sp}{spatial object}
