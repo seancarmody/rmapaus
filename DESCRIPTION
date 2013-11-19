@@ -9,10 +9,11 @@ Description: Tools for plotting Australian maps
 Depends:
     R (>= 2.15),
     ggplot2,
+    scales,
     rgeos,
     rgdal
 Imports:
-    scales,
+    foreign,
     maptools
 License: GPL (>= 2)
 URL: https://github.com/seancarmody/rmapaus
