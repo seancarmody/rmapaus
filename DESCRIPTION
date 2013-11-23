@@ -17,3 +17,10 @@ Imports:
     maptools
 License: GPL (>= 2)
 URL: https://github.com/seancarmody/rmapaus
+Collate:
+    'centroid.R'
+    'getausmap.R'
+    'mapfill.R'
+    'mapops.R'
+    'mapspot.R'
+    'scales.R'

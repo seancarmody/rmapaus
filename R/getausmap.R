@@ -8,10 +8,10 @@
 #' @export
 
 getMapAus <- function(type="SD", crop=TRUE){
-  data(aussd, envir = environment(), package="rmapaus")
+  data(list=list(tolower(paste0("aus", type))), envir = environment(), package="rmapaus")
   map <- get(paste0("aus.", type), envir=environment(), inherits=FALSE)
-  if (crop) {
-    map <- mapCrop(map, bb.australia)
-  }
+#   if (crop) {
+#     map <- mapCrop(map, bb.australia)
+#   }
   map
 }

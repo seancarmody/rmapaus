@@ -2,9 +2,10 @@
 \alias{mapfill}
 \title{Draw map and fill regions}
 \usage{
-mapfill(x, map, fill, id = intersect(names(x), names(map)), id.name = id,
-  border = "grey95", ticks = FALSE, labels = FALSE, label.filter = TRUE,
-  ...)
+  mapfill(x, map, fill,
+    id = intersect(names(x), names(map)), id.name = id,
+    border = "grey95", ticks = FALSE, labels = FALSE,
+    label.filter = TRUE, ...)
 }
 \arguments{
   \item{x}{data frame with fill values}

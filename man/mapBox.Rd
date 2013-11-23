@@ -2,8 +2,8 @@
 \alias{mapBox}
 \title{Create a box spatial object}
 \usage{
-mapBox(coords, sp = NULL, id = "1",
-  CRS = "+proj=longlat +ellps=GRS80 +no_defs")
+  mapBox(coords, sp = NULL, id = "1",
+    CRS = "+proj=longlat +ellps=GRS80 +no_defs")
 }
 \arguments{
   \item{coords}{coordinates}

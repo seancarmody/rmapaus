@@ -2,7 +2,7 @@
 \alias{getMapAus}
 \title{Load Australian maps}
 \usage{
-getMapAus(type = "SD", crop = TRUE)
+  getMapAus(type = "SD", crop = TRUE)
 }
 \arguments{
   \item{type}{a map type}

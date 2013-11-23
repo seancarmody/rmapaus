@@ -2,10 +2,11 @@
 \alias{mapspot}
 \title{Draw map and add bubbles}
 \usage{
-mapspot(x, map, fill, size, id = intersect(names(x), names(map)),
-  id.name = id, border = "grey95", ticks = FALSE, labels = FALSE,
-  label.filter = TRUE, lab.size = 3, regions = "white", max_size = 6,
-  size.label = comma, ...)
+  mapspot(x, map, fill, size,
+    id = intersect(names(x), names(map)), id.name = id,
+    border = "grey95", ticks = FALSE, labels = FALSE,
+    label.filter = TRUE, lab.size = 3, regions = "white",
+    max_size = 6, size.label = comma, ...)
 }
 \arguments{
   \item{x}{data frame with fill values and bubble sizes}
