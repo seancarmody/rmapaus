@@ -1,3 +1,7 @@
+# rmapaus 0.1.4
+
+- Add geocoding capability, using Google Maps API
+
 # rmapaus 0.1.3
 
 - Add statistical subdivision map (SSD)

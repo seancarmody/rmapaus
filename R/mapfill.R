@@ -19,7 +19,7 @@
 #'    whether a given region will be labelled.
 #' @param ... additional parameters passed to \code{geom_text}
 #'    
-#' @details Draws a map.
+#' @details Draws a map with regions shaded based on values provided in a dataframe.
 #' 
 #' @export
 
