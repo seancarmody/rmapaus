@@ -42,6 +42,7 @@
   based on values in a dataframe.
 }
 \details{
-  Draws a map.
+  Draws a map with regions shaded based on values provided
+  in a dataframe.
 }
 
