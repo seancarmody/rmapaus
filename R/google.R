@@ -39,7 +39,7 @@ geo_code <- function(location, output=c("list", "longlat", "detail", "json"), re
   if (length(location) > 1) return(lapply(location, geo_code, output=output))
   root <- "http://maps.google.com/maps/api/geocode/json?address="
   u <- URLencode(paste0(root, location, "&sensor=false", "&region=", region))
-  doc <- getURL(u)
+  doc <- paste(readLines(url(u)), collapse="\n")
   result <- fromJSON(doc, simplify = FALSE)
   stopifnot(result$status=="OK") 
   result <- result$results[[1]]
