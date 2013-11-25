@@ -1,7 +1,7 @@
 Package: rmapaus
 Type: Package
 Title: What the package does (short line)
-Version: 0.1.4
+Version: 0.2.0
 Date: 2013-11-18
 Author: Sean Carmody
 Maintainer: Sean Carmody <seancarmody@gmail.comt>
@@ -27,3 +27,4 @@ Collate:
     'mapspot.R'
     'scales.R'
     'google.R'
+    'rmapaus.R'

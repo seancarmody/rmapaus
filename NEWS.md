@@ -1,3 +1,8 @@
+# rmapaus 0.2.0
+
+- Add additional map data
+- Replace getMapAus with get_mapaus
+
 # rmapaus 0.1.4
 
 - Add geocoding capability, using Google Maps API
