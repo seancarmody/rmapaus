@@ -76,6 +76,7 @@ geo_code <- function(location, output=c("list", "longlat", "detail", "json"), re
 #' @export
 
 find_region_point <- function(point, map){
+  if (missing(map)) stop("no map provided.")
   stopifnot(length(point)==2)
   pt <- readWKT(paste("POINT (", point[1], point[2], ")"))
   proj4string(pt) <- proj4string(map) 
