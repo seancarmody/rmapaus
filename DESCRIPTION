@@ -11,12 +11,13 @@ Depends:
     ggplot2,
     scales,
     rgeos,
-    rgdal
-Imports:
+    rgdal,
     RCurl,
     RJSONIO,
     foreign,
     maptools
+Imports:
+    
 License: GPL (>= 2)
 URL: https://github.com/seancarmody/rmapaus
 Collate:
