@@ -1,3 +1,7 @@
+# rmapaus 0.2.1
+
+- Fix open connections warnings for Google API queries.
+
 # rmapaus 0.2.0
 
 - Add additional map data
