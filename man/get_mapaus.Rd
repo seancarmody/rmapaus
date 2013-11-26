@@ -7,10 +7,10 @@
     accuracy = c("smoothed", "full", "caricature"),
     crop = FALSE, messages = TRUE)
 
-  getMapAus(type = "SD", crop = TRUE)
+  getMapAus(map = "SD", crop = TRUE)
 }
 \arguments{
-  \item{type}{a map type}
+  \item{map}{a string specifying map type}
 
   \item{accuracy}{sting specifying the accuracy of the map
   to load. Default is \code{'smoothed'}.}
