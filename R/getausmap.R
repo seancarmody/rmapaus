@@ -28,5 +28,5 @@ get_mapaus <- function(map="SD", accuracy=c("smoothed", "full", "caricature"),
 #' @export
 getMapAus <- function(map="SD", crop=TRUE){
   warning("getMapAus is now deprecated and will not be supported in future releases. Please use get_mapaus instead.")
-  get_mapaus(type, crop=crop)
+  get_mapaus(map, crop=crop)
 }
