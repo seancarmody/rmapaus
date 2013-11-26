@@ -12,10 +12,17 @@
 \arguments{
   \item{type}{a map type}
 
+  \item{accuracy}{sting specifying the accuracy of the map
+  to load. Default is \code{'smoothed'}.}
+
   \item{crop}{a logical value determining whether map
   should be cropped to mainland Australia and Tasmania
   (i.e. excluding Cocos Keeling Islands, Christmas Island
   and Lord Howe Island).}
+
+  \item{messages}{logical value indicating whether
+  additional logging messages should be displayed as
+  warnings.}
 }
 \description{
   Load Australian maps
