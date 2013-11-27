@@ -85,16 +85,38 @@ geocode <- function(location,
   return(ret)
 }
 
-#' Find region for a point
-#' 
-#' @param point numeric vector of latitude and longitude
+#' Find region for a location
+#'  
+#' @param location vector of string locations
 #' @param map SpatialPolygon object
+#' @param point numeric vector of latitude and longitude
+#' @param ... additional parameters passed to \code{geocode}
 #' 
 #' @details
 #' Checks each region in map to determine with it contains the
 #' specified point. Returns as list of the ids of each region
 #' containing the point.
+#' @examples
+#' \dontrun{
+#' coord <- geocode("64 Reservoir St Surry Hills", "longlat")
+#' ssd <- get_mapaus("SSD")
 #' 
+#' 
+#' region <- find_region_point(coord, ssd)
+#' ssd@@data[region,]
+#' 
+#' find_region("64 Reservoir St Surry Hills", ssd)
+#' 
+#' rm(coord, ssd)
+#' }
+#' @export
+find_region <- function(location, map, ...){
+  point <- geocode(location, output="longlat")
+  if (length(location) == 1) point <- list(point)
+  sapply(point, find_region_point, map=map)
+}
+
+#' @rdname find_region
 #' @export
 
 find_region_point <- function(point, map){
@@ -103,23 +125,6 @@ find_region_point <- function(point, map){
   pt <- readWKT(paste("POINT (", point[1], point[2], ")"))
   proj4string(pt) <- proj4string(map) 
   rownames(map@data)[which(gContains(map, pt, byid=TRUE))]
-}
-
-#' Find region for a point
-#' 
-#' @param location vector of string locations
-#' @param map SpatialPolygon object
-#' 
-#' @details
-#' Checks each region in map to determine with it contains the
-#' specified point. Returns as list of the ids of each region
-#' containing the point.
-#' 
-#' @export
-find_region <- function(location, map){
-  point <- geocode(location, output="longlat")
-  if (length(location) == 1) point <- list(point)
-  sapply(point, find_region_point, map=map)
 }
                     
 # Code below is from ggmap for comparison
