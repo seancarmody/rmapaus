@@ -34,12 +34,13 @@
 #' This function is very similar to the \code{geocode} function in the \code{ggmap}
 #' package.
 #' @examples
-#' 
+#' \dontrun{
 #' geocode("64 Reservoir St Surry Hills")
 #' geocode("64 Reservoir St Surry Hills", output="longlat")
 #' geocode("64 Reservoir St", output="matches")
 #' geocode("64 Reservoir St", output="list")
-#' 
+#' geocode("64 Reservoir St", output="list", country="AU")
+#' }
 #' @export
 
 geocode <- function(location, output=c("summary", "longlat", "detail", "json",
@@ -55,7 +56,7 @@ geocode <- function(location, output=c("summary", "longlat", "detail", "json",
   conn <- url(u)
   doc <- paste(readLines(conn), collapse="\n")
   close(conn)
-  result <- fromJSON(doc, simplify = FALSE)
+  result <- RJSONIO::fromJSON(doc, simplify = FALSE)
   if(result$status != "OK") stop(paste("Geocoding failure:", result$status)) 
   if (output=="matches") return(length(result$results))
   if (output=="list") return(sapply(result$results, function(x) x$formatted_address)) 
