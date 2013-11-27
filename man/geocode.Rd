@@ -9,8 +9,8 @@
 }
 \usage{
   geocode(location,
-    output = c("list", "longlat", "detail", "json"),
-    region = "AU", list = FALSE, item = 1, ...)
+    output = c("summary", "longlat", "detail", "json", "list", "matches"),
+    region = "AU", item, ...)
 }
 \arguments{
   \item{location}{vector of location strings.}
@@ -19,6 +19,12 @@
 
   \item{region}{two letter country code to determine search
   bias.}
+
+  \item{item}{numeric value specifying which result to
+  return if there are multiple matches.}
+
+  \item{...}{additional parameters passed to the Google
+  API.}
 }
 \description{
   Interrogate the Google Maps API to geocode a specified
@@ -39,7 +45,7 @@
   caution!
 
   Location type, for more info check here:
-  https://developers.google.com/maps/documentation/directions/
+  \url{https://developers.google.com/maps/documentation/directions/}
   "ROOFTOP" indicates that the returned result is a precise
   geocode for which we have location information accurate
   down to street address precision. "RANGE_INTERPOLATED"
@@ -52,5 +58,11 @@
   center of a result such as a polyline (for example, a
   street) or polygon (region). "APPROXIMATE" indicates that
   the returned result is approximate.
+}
+\examples{
+geocode("64 Reservoir St Surry Hills")
+geocode("64 Reservoir St Surry Hills", output="longlat")
+geocode("64 Reservoir St", output="matches")
+geocode("64 Reservoir St", output="list")
 }
 

@@ -1,11 +1,11 @@
 \docType{data}
-\name{SD.full}
-\alias{SD.full}
-\title{Statistical division map data}
+\name{SLA.full}
+\alias{SLA.full}
+\title{Statistical local area map data}
 \format{A spatial polygon data frame with 61 regions}
 \description{
   A dataset containing map data for Australian statistical
-  divisions (SD). Data is sourced from the Australian
+  local areas (SLA). Data is sourced from the Australian
   Bureau of Statistics.
 }
 \keyword{datasets}
