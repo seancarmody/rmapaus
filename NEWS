@@ -1,3 +1,7 @@
+# rmapais 0.2.2
+
+- Updated documentation
+
 # rmapaus 0.2.1
 
 - Fix open connections warnings for Google API queries.
