@@ -1,5 +1,5 @@
-\name{geo_code}
-\alias{geo_code}
+\name{geocode}
+\alias{geocode}
 \title{Geocode using the Google Maps}
 \source{
   The code is adapted from
@@ -8,9 +8,9 @@
   \code{geocode} function in the \code{ggmap} package.
 }
 \usage{
-  geo_code(location,
+  geocode(location,
     output = c("list", "longlat", "detail", "json"),
-    region = "AU")
+    region = "AU", list = FALSE, item = 1, ...)
 }
 \arguments{
   \item{location}{vector of location strings.}

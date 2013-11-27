@@ -33,18 +33,29 @@
 #' 
 #' @export
 
-geo_code <- function(location, output=c("list", "longlat", "detail", "json"), region="AU") {
+geocode <- function(location, output=c("summary", "longlat", "detail", "json",
+                                       "list", "matches"), region="AU", item, ...) {
   stopifnot(is.character(location))
   output <- match.arg(output)
-  if (length(location) > 1) return(lapply(location, geo_code, output=output))
+  if (length(location) > 1) return(lapply(location, geocode, output=output))
   root <- "http://maps.google.com/maps/api/geocode/json?address="
-  u <- URLencode(paste0(root, location, "&sensor=false", "&region=", region))
+  components <- list(...)
+  components <- paste(names(components), components, sep=":", collapse="|") 
+  u <- URLencode(paste0(root, location, "&sensor=false", "&region=", region, 
+                        "&components=", components)) 
   conn <- url(u)
   doc <- paste(readLines(conn), collapse="\n")
   close(conn)
   result <- fromJSON(doc, simplify = FALSE)
-  stopifnot(result$status=="OK") 
-  result <- result$results[[1]]
+  if(result$status != "OK") stop(paste("Geocoding failure:", result$status)) 
+  if (output=="matches") return(length(result$results))
+  if (output=="list") return(sapply(result$results, function(x) x$formatted_address)) 
+  if (missing(item)) {
+    item <- 1
+    if (length(result$results) > 1) warning("Multiple matches: returning first match. Set list=TRUE to see all matches")
+  } else if (item > length(result$results)) stop(paste("Requested item", item, 
+                                                "out of bounds.")) 
+  result <- result$results[[item]]
   if (output=="json") return(doc)
   if (output=="detail") return(result)
   ret <- list()
@@ -95,7 +106,7 @@ find_region_point <- function(point, map){
 #' 
 #' @export
 find_region <- function(location, map){
-  point <- geo_code(location, output="longlat")
+  point <- geocode(location, output="longlat")
   if (length(location) == 1) point <- list(point)
   sapply(point, find_region_point, map=map)
 }

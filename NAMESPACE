@@ -1,6 +1,6 @@
 export(find_region)
 export(find_region_point)
-export(geo_code)
+export(geocode)
 export(getMapAus)
 export(get_mapaus)
 export(mapBox)
