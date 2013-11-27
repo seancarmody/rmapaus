@@ -2,7 +2,7 @@
 #' 
 #' @name rmapaus
 #' @docType package
-#' @import ggplot2 scales rgeos rgdal RJSONIO
+#' @import ggplot2 scales rgeos rgdal 
 NULL
 
 #' Statistical division map data

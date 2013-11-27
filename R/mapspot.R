@@ -44,7 +44,7 @@ mapspot <- function(x, map, fill, size, id = intersect(names(x), names(map)),
   map <- map[map@data[,id] %in% ids, ]
   x <- x[x[, id] %in% ids, ]
   map_df <- fortify(map, region=id)
-  x <- join(map@data[, c(id, "long", "lat")], x, by=id)
+  x <- plyr::join(map@data[, c(id, "long", "lat")], x, by=id)
   
   # Draw map
   plt <- ggplot(x) +
