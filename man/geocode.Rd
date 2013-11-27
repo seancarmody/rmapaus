@@ -9,8 +9,8 @@
 }
 \usage{
   geocode(location,
-    output = c("summary", "longlat", "detail", "json", "list", "matches"),
-    region = "AU", item, ...)
+    output = c("summary", "longlat", "detail", "json", "list", "matches", "url"),
+    item, region = "AU", ...)
 }
 \arguments{
   \item{location}{vector of location strings.}
@@ -37,12 +37,9 @@
   result will be returned and the specified search bias
   region will used to assist in making a selection.
 
-  This function uses RCurl and RJSONIO to download data
-  from Google's API: Latitude, longitude, location type
-  (see explanation at the end), formatted address Notice
-  there is a limit of 2,500 calls per day. Currently, the
-  function does not enforce this limit, so exercise
-  caution!
+  Notice there is a limit of 2,500 calls per day.
+  Currently, the function does not enforce this limit, so
+  exercise caution!
 
   Location type, for more info check here:
   \url{https://developers.google.com/maps/documentation/directions/}
@@ -60,9 +57,12 @@
   the returned result is approximate.
 }
 \examples{
+\dontrun{
 geocode("64 Reservoir St Surry Hills")
 geocode("64 Reservoir St Surry Hills", output="longlat")
 geocode("64 Reservoir St", output="matches")
 geocode("64 Reservoir St", output="list")
+geocode("64 Reservoir St", output="list", country="AU")
+}
 }
 
