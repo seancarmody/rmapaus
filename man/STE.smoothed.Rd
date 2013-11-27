@@ -2,7 +2,7 @@
 \name{STE.smoothed}
 \alias{STE.smoothed}
 \title{State and Territory mapdata (smoothed)}
-\format{A spatial polygon data frame with 206 regions}
+\format{A spatial polygon data frame with 9 regions}
 \description{
   A dataset containing map data for Australian states and
   territories The regions have been adapted from the full

@@ -2,8 +2,10 @@
 \name{rmapaus}
 \alias{rmapaus}
 \alias{rmapaus-package}
-\title{rmapaus.}
+\title{rmapaus: mapping Australia}
 \description{
-  rmapaus.
+  The rmapaus package provides spatial boundaries for
+  various Australian regions, including postcodes and
+  Australian Bureau of Statistics statistical regions.
 }
 

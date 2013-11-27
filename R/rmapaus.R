@@ -1,4 +1,9 @@
-#' rmapaus.
+#' rmapaus: mapping Australia
+#' 
+#' @description
+#' 
+#' The rmapaus package provides spatial boundaries for various Australian regions,
+#' including postcodes and Australian Bureau of Statistics statistical regions.
 #' 
 #' @name rmapaus
 #' @docType package
@@ -74,7 +79,7 @@ NULL
 #' @keywords datasets
 #' @name STE.full
 #' @usage data(ste)
-#' @format A spatial polygon data frame with 206 regions
+#' @format A spatial polygon data frame with 9 regions
 NULL
 
 #' State and Territory mapdata (smoothed)
@@ -87,7 +92,7 @@ NULL
 #' @keywords datasets
 #' @name STE.smoothed
 #' @usage data(ste)
-#' @format A spatial polygon data frame with 206 regions
+#' @format A spatial polygon data frame with 9 regions
 NULL
 
 #' State and Territory mapdata (caricature)
@@ -113,5 +118,5 @@ NULL
 #' @keywords datasets
 #' @name SLA.full
 #' @usage data(sla)
-#' @format A spatial polygon data frame with 61 regions
+#' @format A spatial polygon data frame with 1390 regions
 NULL
