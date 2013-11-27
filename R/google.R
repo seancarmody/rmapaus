@@ -17,8 +17,6 @@
 #' and the specified search bias region will used to assist in making
 #' a selection. 
 #' 
-#' This function uses RCurl and RJSONIO to download data from Google's API:
-#' Latitude, longitude, location type (see explanation at the end), formatted address
 #' Notice there is a limit of 2,500 calls per day. Currently, the function does
 #' not enforce this limit, so exercise caution!
 #'
@@ -43,8 +41,9 @@
 #' }
 #' @export
 
-geocode <- function(location, output=c("summary", "longlat", "detail", "json",
-                                       "list", "matches"), region="AU", item, ...) {
+geocode <- function(location,
+                    output=c("summary", "longlat", "detail", "json", "list", "matches", "url"),
+                    item, region="AU", ...) {
   stopifnot(is.character(location))
   output <- match.arg(output)
   if (length(location) > 1) return(lapply(location, geocode, output=output))
@@ -53,13 +52,15 @@ geocode <- function(location, output=c("summary", "longlat", "detail", "json",
   components <- paste(names(components), components, sep=":", collapse="|") 
   u <- URLencode(paste0(root, location, "&sensor=false", "&region=", region, 
                         "&components=", components)) 
+  if (output=="url") return(u)
   conn <- url(u)
   doc <- paste(readLines(conn), collapse="\n")
   close(conn)
   result <- RJSONIO::fromJSON(doc, simplify = FALSE)
   if(result$status != "OK") stop(paste("Geocoding failure:", result$status)) 
   if (output=="matches") return(length(result$results))
-  if (output=="list") return(sapply(result$results, function(x) x$formatted_address)) 
+  if (output=="list") return(sapply(result$results,
+                                    function(x) x$formatted_address)) 
   if (missing(item)) {
     item <- 1
     if (length(result$results) > 1) warning("Multiple matches: returning first match. Set list=TRUE to see all matches")
