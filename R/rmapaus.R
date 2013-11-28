@@ -7,7 +7,7 @@
 #' 
 #' @name rmapaus
 #' @docType package
-#' @import ggplot2 scales rgeos rgdal 
+#' @import ggplot2 scales rgeos rgdal sp 
 NULL
 
 #' Statistical division map data
@@ -118,5 +118,17 @@ NULL
 #' @keywords datasets
 #' @name SLA.full
 #' @usage data(sla)
+#' @format A spatial polygon data frame with 1390 regions
+NULL
+
+#' Australian postcode map data
+#'  
+#' A dataset containing map data for Australian postcodes (POA).
+#' Data is sourced from the Australian Bureau of Statistics.
+#' 
+#' @docType data
+#' @keywords datasets
+#' @name POA.full
+#' @usage data(poa)
 #' @format A spatial polygon data frame with 1390 regions
 NULL
