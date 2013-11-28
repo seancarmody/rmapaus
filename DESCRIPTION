@@ -14,8 +14,8 @@ Imports:
     scales,
     rgdal,
     plyr,
-    RJSONIO,
-    sp
+    sp,
+    RJSONIO
 Suggests:
     maptools,
     foreign
