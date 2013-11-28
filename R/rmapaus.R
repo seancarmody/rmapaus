@@ -130,5 +130,5 @@ NULL
 #' @keywords datasets
 #' @name POA.full
 #' @usage data(poa)
-#' @format A spatial polygon data frame with 1390 regions
+#' @format A spatial polygon data frame with 2513 regions
 NULL
