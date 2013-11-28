@@ -2,10 +2,9 @@
 \alias{mapfill}
 \title{Draw map and fill regions}
 \usage{
-  mapfill(x, map, fill,
-    id = intersect(names(x), names(map)), id.name = id,
-    border = "grey95", ticks = FALSE, labels = FALSE,
-    label.filter = TRUE, ...)
+mapfill(x, map, fill, id = intersect(names(x), names(map)), id.name = id,
+  border = "grey95", ticks = FALSE, labels = FALSE, label.filter = TRUE,
+  ...)
 }
 \arguments{
   \item{x}{data frame with fill values}
@@ -38,11 +37,11 @@
   \code{geom_text}}
 }
 \description{
-  Use ggplot2 to draw a map and fill regions of the map
-  based on values in a dataframe.
+Use ggplot2 to draw a map and fill regions of the map based
+on values in a dataframe.
 }
 \details{
-  Draws a map with regions shaded based on values provided
-  in a dataframe.
+Draws a map with regions shaded based on values provided in
+a dataframe.
 }
 

@@ -3,9 +3,9 @@
 \alias{find_region_point}
 \title{Find region for a location}
 \usage{
-  find_region(location, map, ...)
+find_region(location, map, ...)
 
-  find_region_point(point, map)
+find_region_point(point, map)
 }
 \arguments{
   \item{location}{vector of string locations}
@@ -18,12 +18,12 @@
   \code{geocode}}
 }
 \description{
-  Find region for a location
+Find region for a location
 }
 \details{
-  Checks each region in map to determine with it contains
-  the specified point. Returns as list of the ids of each
-  region containing the point.
+Checks each region in map to determine with it contains the
+specified point. Returns as list of the ids of each region
+containing the point.
 }
 \examples{
 \dontrun{

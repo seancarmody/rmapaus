@@ -3,13 +3,18 @@
 \alias{SSD.full}
 \title{Statistical sub-division map data}
 \format{A spatial polygon data frame with 206 regions}
-\description{
-  A dataset containing map data for Australian statistical
-  sub-divisions (SSD). Data is sourced from the Australian
-  Bureau of Statistics.
+\usage{
+data(ssd)
 
-  A dataset containing map data for Australian statistical
-  sub-divisions (SSD).
+data(ssd)
+}
+\description{
+A dataset containing map data for Australian statistical
+sub-divisions (SSD). Data is sourced from the Australian
+Bureau of Statistics.
+
+A dataset containing map data for Australian statistical
+sub-divisions (SSD).
 }
 \keyword{datasets}
 
