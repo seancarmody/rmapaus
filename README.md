@@ -8,7 +8,7 @@ Statistical Division. Note that postcode boundaries do not always align with
 Bureau of Statistics boundaries, as is evident here: the black line shows the
 border of the 10505 Statistcal Division.
 
-```R
+```
 poa <- get_mapaus("POA", accuracy="full")
 ssd <- get_mapaus("SSD", accuracy="full")
 plot(poa[poa$SSD_CODE11=="10505", ], col="grey", border="white")
