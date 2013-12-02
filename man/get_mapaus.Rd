@@ -3,10 +3,11 @@
 \alias{get_mapaus}
 \title{Load Australian maps}
 \usage{
-get_mapaus(map = "SD", accuracy = c("smoothed", "full", "caricature"),
-  crop = FALSE, messages = TRUE)
+  get_mapaus(map = "SD",
+    accuracy = c("smoothed", "full", "caricature"),
+    crop = FALSE, messages = TRUE)
 
-getMapAus(map = "SD", crop = TRUE)
+  getMapAus(map = "SD", crop = TRUE)
 }
 \arguments{
   \item{map}{a string specifying map type}
@@ -24,6 +25,6 @@ getMapAus(map = "SD", crop = TRUE)
   warnings.}
 }
 \description{
-Load Australian maps
+  Load Australian maps
 }
 

@@ -2,10 +2,11 @@
 \alias{mapspot}
 \title{Draw map and add bubbles}
 \usage{
-mapspot(x, map, fill, size, id = intersect(names(x), names(map)),
-  id.name = id, border = "grey95", ticks = FALSE, labels = FALSE,
-  label.filter = TRUE, lab.size = 3, regions = "white", max_size = 6,
-  size.label = comma, ...)
+  mapspot(x, map, fill, size,
+    id = intersect(names(x), names(map)), id.name = id,
+    border = "grey95", ticks = FALSE, labels = FALSE,
+    label.filter = TRUE, lab.size = 3, regions = "white",
+    max_size = 6, size.label = comma, ...)
 }
 \arguments{
   \item{x}{data frame with fill values and bubble sizes}
@@ -50,10 +51,10 @@ mapspot(x, map, fill, size, id = intersect(names(x), names(map)),
   \code{geom_text}}
 }
 \description{
-Use ggplot2 to draw a map and fill regions of the map based
-on values in a dataframe.
+  Use ggplot2 to draw a map and fill regions of the map
+  based on values in a dataframe.
 }
 \details{
-Draws a map.
+  Draws a map.
 }
 
