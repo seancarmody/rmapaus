@@ -46,14 +46,15 @@ mapfill <- function(x, map, fill, id = intersect(names(x), names(map)),
     expand_limits(x = map_df$long, y = map_df$lat)
  if(labels) {
    # Check map data includes coordinates for labels
-   if (!all(c("long", "lat") %in% names(map))){
+   if (!all(c("long", "lat") %in% names(map@data))){
      warning("Label coordinates 'long' and 'lat' not provided.")
    } else {
     # Apply filter to labels
     ids <- x[eval(substitute(label.filter), x, parent.frame()), id]
     map <- map[map@data[ ,id] %in% ids,]
     plt <- plt + geom_text(data=map@data,
-                             aes_string(x="long", y="lat", label=id.name, fill=NULL),  
+                             aes_string(x="long", y="lat",
+                             label=id.name, fill=NULL),  
                              ...)
    }
  }
