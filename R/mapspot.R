@@ -26,6 +26,7 @@
 #' @param ... additional parameters passed to \code{geom_text}
 #'    
 #' @details Draws a map.
+#' @export
 mapspot <- function(x, map, fill, size, id = intersect(names(x), names(map)),
                     id.name = id, border="grey95", ticks=FALSE,
                     labels=FALSE, label.filter=TRUE, 
