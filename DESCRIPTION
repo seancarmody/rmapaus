@@ -1,7 +1,7 @@
 Package: rmapaus
 Type: Package
 Title: Australian map data and tools
-Version: 0.2.3
+Version: 0.2.4
 Date: 2013-11-18
 Author: Sean Carmody
 Maintainer: Sean Carmody <seancarmody@gmail.comt>
@@ -24,9 +24,9 @@ URL: https://github.com/seancarmody/rmapaus
 Collate:
     'centroid.R'
     'getausmap.R'
-    'google.R'
     'mapfill.R'
     'mapops.R'
     'mapspot.R'
-    'rmapaus.R'
     'scales.R'
+    'google.R'
+    'rmapaus.R'
