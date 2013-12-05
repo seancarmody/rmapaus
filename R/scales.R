@@ -22,7 +22,8 @@ scale_colour_heat <- function(...){
 }
 
 #' Add guide size
-#'  
+#' 
+#' @param colour colour of size bubbles in legend. Default is \code{black}. 
 #' @param ... additional arguments passed to scale functions
 #' 
 #' @export

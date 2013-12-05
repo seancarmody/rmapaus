@@ -26,6 +26,8 @@
 mapfill <- function(x, map, fill, id = intersect(names(x), names(map)), 
                     id.name = id, border="grey95", ticks=FALSE, 
                     labels=FALSE, label.filter=TRUE, ...) {
+  # Check map data includes coordinates for points and labels
+  stopifnot(all(c("long", "lat") %in% names(map)))   
   x <- as.data.frame(x)
   
   if (length(id) > 1) {

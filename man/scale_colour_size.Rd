@@ -5,6 +5,9 @@
   scale_colour_size(colour = "black", ...)
 }
 \arguments{
+  \item{colour}{colour of size bubbles in legend. Default
+  is \code{black}.}
+
   \item{...}{additional arguments passed to scale
   functions}
 }
