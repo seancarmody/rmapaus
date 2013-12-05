@@ -78,10 +78,12 @@ geocode <- function(location,
   # In Australia, the State is recorded as Area Level 1
   if (result$address_components[[4]]$types[[1]]=="administrative_area_level_1")
     ret$state <- result$address_components[[4]]$short_name
-  if (result$address_components[[6]]$types[[1]] == "postal_code") 
+  if (length(result$address_components)>=5) {
+    if(result$address_components[[6]]$types[[1]] == "postal_code") 
     ret$postcode <- result$address_components[[6]]$short_name
-  ret$ISO2 <- result$address_components[[5]]$short_name
-  ret$country <- result$address_components[[5]]$long_name
+    ret$ISO2 <- result$address_components[[5]]$short_name
+    ret$country <- result$address_components[[5]]$long_name
+  }
   return(ret)
 }
 
