@@ -17,3 +17,10 @@ plot(ssd[ssd$SSD_CODE11=="10505", ], add=TRUE)
 ```
 
 ![Postcode Chart](http://i.imgur.com/oj53buG.png)
+
+I am keen for feedback on the package, so feel free to:
+
+* submit suggestions or bug-reports: https://github.com/seancarmody/rmapaus/issues
+* send a pull request of fixes or enhancements on: https://github.com/seancarmody/rmapaus/
+* contact me directly on seancarmody@gmail.com
+
