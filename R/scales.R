@@ -8,7 +8,7 @@
 
 scale_fill_heat <- function(labels = waiver(), ...){
   scale_fill_gradient2(low = 'royalblue1', high = 'firebrick1',
-    na.value = 'greg65', labels = labels, ...)
+    na.value = 'grey65', labels = labels, ...)
 }
 
 #' Add guide colours
