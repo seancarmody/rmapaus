@@ -6,7 +6,7 @@ R package to simplify visualising Australian data
 Here is an example which plots all suburbs falling the in Inner Sydney (10505)
 Statistical Division. Note that postcode boundaries do not always align with
 Bureau of Statistics boundaries, as is evident here: the black line shows the
-border of the 10505 Statistcal Division.
+border of the 10505 Statistical Division. 
 
 ```
 poa <- get_mapaus("POA", accuracy="full")
